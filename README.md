@@ -6,6 +6,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn demo` or `npm run demo`
+Run the app in the development mode a lonely service.
+
+Json-server start on port 3000
+React start on port 5000
+
+If you change the data, please change `db.json` key `"options"` with an array contains string or number like below:
+
+```json
+{
+  "options": [
+    "blabla",
+    "blublu",
+    "foo",
+    "bar",
+    "baz",
+    2,
+    134
+  ]
+}
+```
+
+The program take values and transform in objects for demonstration.
+
 ### `yarn start`
 
 Runs the app in the development mode.\

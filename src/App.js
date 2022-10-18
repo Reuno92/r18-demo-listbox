@@ -9,20 +9,36 @@ function App() {
       { id: 1, value: "Foo"}, {id: 2, value: "Bar"}, {id: 3, value:"Baz"}
   ];
 
+    /**
+     *  For displaying data
+     */
   const [toggle, setToggle] = useState(false);
 
+    /**
+     * List of options
+     */
   const [options, setOptions] = useState(OPTIONS);
+
+    /**
+     * List of selected
+     */
   const [selected, setSelected] = useState([]);
+
+    /**
+     * Required state, if user select data into ListBox
+     */
   const [required, setRequired] = useState(true);
 
+    /**
+     * Http Error, normally, if you don't firewall which block http protocol on your computer.
+     */
   const [error, setError] = useState(null);
 
-    useEffect(
-        () => {
-            selected.length === 0 ? setRequired(true) : setRequired(false)
-        }, [selected]
-    )
-
+    /**
+     * At start of component, it calls to fake api for retrieve information
+     * transform all item of array in javascript array of object
+     * and set data into ListBox Component.
+     */
     useEffect( () => {
         axios.get('http://localhost:3000/options')
             .then( res => {
@@ -36,7 +52,17 @@ function App() {
                 setOptions(DATA);
             })
             .catch(e => setError(e) )
-    }, [])
+    }, []);
+
+    /**
+     *  Look the selected item, if it was no selected item in ListBox,
+     *  the state required pass true and return message and class into the component
+     */
+    useEffect(
+        () => {
+            selected.length === 0 ? setRequired(true) : setRequired(false)
+        }, [selected]
+    )
 
   return (
     <>
