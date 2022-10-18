@@ -6,13 +6,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn demo` or `npm run demo`
-Run the app in the development mode a lonely service.
+### Download dependencies
 
-Json-server start on port 3000
-React start on port 5000
+If you don't have installed `NodeJS` you can download it on:
 
-If you change the data, please change `db.json` key `"options"` with an array contains string or number like below:
+* [PC](https://nodejs.org/dist/v16.18.0/node-v16.18.0-x64.msi)
+* [Mac](https://nodejs.org/dist/v16.18.0/node-v16.18.0.pkg)
+
+Please follow instructions by installer.
+
+and retry `yarn` or `npm i`
+
+### Run demo
+Run the app in the development mode a lonely service with `yarn demo` or `npm run demo`
+
+* **Json-server** start on port 3000 in watch mode, you could refresh your browser for see your changes. 
+* **React** start on port 5000
+
+If you change the data, please change the file `db.json` with key `options` with an array contains **ONLY** string or number like below:
 
 ```json
 {
