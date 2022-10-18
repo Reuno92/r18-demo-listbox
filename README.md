@@ -20,6 +20,8 @@ and retry `yarn` or `npm i`
 ### Run demo
 Run the app in the development mode a lonely service with `yarn demo` or `npm run demo`
 
+> Please wait a moment during NodeJS transpile JSX in native JavaScript. It takes any seconds according the power of your machine. 
+
 * **Json-server** start on port 3000 in watch mode, you could refresh your browser for see your changes. 
 * **React** start on port 5000
 
@@ -44,7 +46,7 @@ The program take values and transform in objects for demonstration.
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
