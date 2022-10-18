@@ -1,0 +1,68 @@
+@use "node_modules/react-widgets/scss/styles" with ($components: ('Listbox'));
+
+.module {
+  display: block;
+  width: 22%;
+}
+
+.toggle-data {
+  display: block;
+  width: 72%;
+}
+
+pre {
+  background-color: lightgrey;
+  padding: 1.25rem;
+}
+
+.demo {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+  padding: 2rem 5rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cols {
+  display: none;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  & > div {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.show {
+  display: flex !important;
+}
+
+.listbox {
+  display: block;
+  width: 15rem;
+  max-height: 10rem;
+  overflow: hidden;
+  overflow-y: auto;
+  &.dirty {
+    border-color: red;
+    outline: 3px solid rgb(255, 0, 0, .5);
+  }
+}
+
+.is-invalid {
+  font-size: .75rem;
+  color: red;
+}
+
+.rw-list-option.rw-state-selected, .rw-state-selected.rw-list-option-create {
+  background-color: rgb(62, 0, 86);
+  border-color: rgb(62, 0, 86);
+}
+
+.rw-list-option:hover, .rw-list-option-create:hover, [data-intent="keyboard"] .rw-list-option.rw-state-focus:not(.rw-state-selected), [data-intent="keyboard"] .rw-state-focus.rw-list-option-create:not(.rw-state-selected) {
+  background-color: rgba(62, 0, 86, .75);
+  border-color: rgba(62, 0, 86, .75);
+  color: white;
+}
